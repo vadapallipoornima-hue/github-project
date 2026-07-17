@@ -1,12 +1,12 @@
 name: firstworkflow
-on: workflow_dispatch
-jobs:
-  firstjob:
-    runs-on: ubuntu-latest
+on: workflow_dispatch           # manual trigger configuration
+jobs:                           # stages 
+  firstjob:                     # name
+    runs-on: ubuntu-latest      # create agent
     steps:
-      - name: print greetings
-        run: echo "Hello, world!""
+      - name: print greetings   
+        run: echo "Hello, world!"   # executing command
       - name: print goodbye
-        run: 
-          echo Add other actions to build,
-          echo test, and deploy your project.
+        run: |                      # executing next command
+          echo "this is my 1st github action"
+          echo "workflow executed successfully"
